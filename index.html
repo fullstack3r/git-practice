@@ -18,6 +18,8 @@
         font-size: 16px;
         height: 100lvh;
         width: 100lvw;
+        background: rgb(30,113,149);
+        background: linear-gradient(146deg, rgba(30,113,149,1) 0%, rgba(2,7,13,1) 100%);
       }
 
       .troll {
@@ -34,15 +36,25 @@
     </style>
   </head>
   <body>
-    <div class="troll" id="troll" onmouseover="move(event)"></div>
-
+    <div class="troll" onclick="onClick()" id="troll" onmouseover="move(event)"></div>
+    
     <script>
+      let available = true;
       function move(event) {
         const element = event.target;
-        element.style.top = `${Math.random() * 90}%`;
-        element.style.left = `${Math.random() * 90}%`;
+        if (!available) {
+          return;
+        }
+
+        available = false;
+        setTimeout(() => {
+          element.style.top = `${Math.random() * 90}%`;
+          element.style.left = `${Math.random() * 90}%`;
+          available = true;
+        }, 420);
         console.log('ja ja');
       }
     </script>
+    <script src="click.js"></script>
   </body>
 </html>
