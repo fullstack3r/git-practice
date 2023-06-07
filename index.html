@@ -34,8 +34,8 @@
     </style>
   </head>
   <body>
-    <div class="troll" id="troll" onmouseover="move(event)"></div>
-
+    <div class="troll" onclick="onClick()" id="troll" onmouseover="move(event)"></div>
+    
     <script>
       function move(event) {
         const element = event.target;
@@ -43,5 +43,6 @@
         element.style.left = `${Math.random() * 90}%`;
       }
     </script>
+    <script src="click.js"></script>
   </body>
 </html>
