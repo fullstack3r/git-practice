@@ -36,8 +36,8 @@
     </style>
   </head>
   <body>
-    <div class="troll" id="troll" onmouseover="move(event)"></div>
-
+    <div class="troll" onclick="onClick()" id="troll" onmouseover="move(event)"></div>
+    
     <script>
       let available = true;
       function move(event) {
@@ -54,5 +54,6 @@
         }, 420);
       }
     </script>
+    <script src="click.js"></script>
   </body>
 </html>
