@@ -1,0 +1,11 @@
+.troll {
+    position: absolute;
+    background-color: #339966;
+    border-radius: 0;
+    width: 4rem;
+    height: 4rem;
+    top: calc(50% - 2rem);
+    left: calc(50% - 2rem);
+    cursor: pointer;
+    transition: 200ms;
+  }
