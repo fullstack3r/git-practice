@@ -37,10 +37,19 @@
     <div class="troll" id="troll" onmouseover="move(event)"></div>
 
     <script>
+      let available = true;
       function move(event) {
         const element = event.target;
-        element.style.top = `${Math.random() * 90}%`;
-        element.style.left = `${Math.random() * 90}%`;
+        if (!available) {
+          return;
+        }
+
+        available = false;
+        setTimeout(() => {
+          element.style.top = `${Math.random() * 90}%`;
+          element.style.left = `${Math.random() * 90}%`;
+          available = true;
+        }, 420);
       }
     </script>
   </body>
